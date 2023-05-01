@@ -55,8 +55,8 @@ def test_face_detection_video_stream():
     cap.release()
     cv2.destroyAllWindows()
     print(f'Total No of Faces:{face_id}')
-    return face_id
+    return faces,face_locations
 
 
-if __name__ == '__main__':
-    test_face_detection_video_stream()
+# if __name__ == '__main__':
+#     test_face_detection_video_stream()

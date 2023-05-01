@@ -22,7 +22,7 @@ def test_face_detection(filepath):
 
 
 
-if __name__ == '__main__':
-    test_face_detection('./images/chris_evans.jpg')
-    test_face_detection('./images/no_faces.jpg')
-    test_face_detection('./images/DC.jpg')
+# if __name__ == '__main__':
+#     test_face_detection('./images/chris_evans.jpg')
+#     test_face_detection('./images/no_faces.jpg')
+#     test_face_detection('./images/DC.jpg')
