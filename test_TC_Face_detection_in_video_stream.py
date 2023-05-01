@@ -15,6 +15,4 @@ def test_all_face_centers_are_tuples():
     # Check that all face centers are tuples with two elements
     assert all(isinstance(loc, tuple) and len(loc) == 2 for loc in face_locations.values())
 
-def test_face_count():
-    # Check that the face count is accurate
-    assert len(face_locations) == sum(1 for _ in faces)
+

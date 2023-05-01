@@ -3,3 +3,4 @@ src/__pycache__/*
 .history/*
 __pycache__/*
 env/*
+__pycache__*

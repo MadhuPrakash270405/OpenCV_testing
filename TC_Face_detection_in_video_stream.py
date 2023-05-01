@@ -42,7 +42,7 @@ def test_face_detection_video_stream():
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
             cv2.putText(frame, f"Face {matched_face_id}", (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
         # Display the resulting frame and the face count
-        cv2.putText(frame, f"No. of Faces: {len(face_locations)}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+        # cv2.putText(frame, f"No. of Faces: {len(face_locations)}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
         cv2.imshow('frame', frame)
             # Check if the time limit has been reached
         elapsed_time = time.time() - start_time
