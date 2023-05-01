@@ -13,21 +13,21 @@ def test_Template_matching():
     methods = [cv2.TM_CCOEFF, cv2.TM_CCOEFF_NORMED, cv2.TM_CCORR,
              cv2.TM_CCORR_NORMED, cv2.TM_SQDIFF, cv2.TM_SQDIFF_NORMED] 
     height, width =src.shape
-    H, W = temp.shape
+    TEMP_HEIGHT, TEMP_WIDTH = temp.shape
     for method in methods:
         src2 = src.copy()
         result = cv2.matchTemplate(src2, temp, method)
         min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
         print(min_loc, max_loc)
         if method in [cv2.TM_SQDIFF,cv2.TM_CCORR]:
-            lacation = min_loc
+            LOCATION = min_loc
         else:
             location = max_loc
-        bottom_right = (location[0] + W, location[1] + H)
+        bottom_right = (location[0] + TEMP_WIDTH, location[1] + TEMP_HEIGHT)
         cv2.rectangle(src2, location,bottom_right, 255, 5)
         cv2.imshow('Final Image', src2)
         cv2.waitKey(0)
         cv2.destroyAllWindows() 
 
-if __name__ == '__main__':
-    test_Template_matching()
+# if __name__ == '__main__':
+#     test_Template_matching()
